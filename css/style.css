@@ -18,6 +18,7 @@
   --accent-amber:       #d4956a;
   --accent-amber-light: #e8b08a;
   --accent-amber-muted: rgba(212, 149, 106, 0.12);
+  --gradient-brand: linear-gradient(130deg, var(--accent-sage-light) 0%, var(--accent-amber) 100%);
   --text-primary:   #f0f0ec;
   --text-secondary: #a0a89e;
   --text-muted:     #5a6460;
