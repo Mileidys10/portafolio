@@ -94,7 +94,7 @@ const PROJECTS = [
     image: 'assets/images/videogame_pose_preview.jpg',
     summary: 'Videojuego de combate multijugador por vision computacional en tiempo real donde los jugadores disparan rayos usando poses corporales frente a la camara.',
     tags: ['Python', 'YOLOv8-Pose', 'MediaPipe', 'Pygame-CE', 'OpenCV', 'Computer Vision'],
-    github: 'https://github.com/Mileidys10',
+    github: 'https://github.com/Mileidys10/videogame_pose',
     architecture: 'Patron Strategy desacoplado con soporte intercambiable entre YOLOv8-Pose y MediaPipe Tasks API. Motor de fisica de proyectiles continuos y sintetizador de audio procedimental offline.',
     challenges: [
       'Estimacion y seguimiento de poses corporales multiples a 60 FPS en resolucion 1080p.',
@@ -116,7 +116,7 @@ const PROJECTS = [
     image: 'assets/images/telegram_erp_preview.jpg',
     summary: 'Agente conversacional empresarial para Telegram conectado a BD relacionales para consultar stock, registrar movimientos Kardex y emitir reportes PDF.',
     tags: ['Python', 'SQLAlchemy', 'Telegram API', 'Google GenAI', 'ReportLab', 'PostgreSQL'],
-    github: 'https://github.com/Mileidys10',
+    github: 'https://github.com/Mileidys10/telegram_erp_agent',
     architecture: 'Bot asincrono con control de acceso por roles (RBAC), transacciones ACID en SQLAlchemy, reportes ejecutivos PDF con ReportLab y consultas en lenguaje natural con Gemini Function Calling.',
     challenges: [
       'Aislamiento de permisos estrictos por usuario de Telegram (Almacen, Ventas, Gerencia).',
@@ -172,6 +172,28 @@ const PROJECTS = [
       'Persistencia robusta en IndexedDB con cero latencia',
       'Despliegue activo en Firebase Hosting con soporte PWA instalable',
       'Estetica minimalista premium en modo oscuro con paleta titanio y ambar'
+    ]
+  },
+  {
+    id: 'agente-enfermeria',
+    title: 'Agente Clínico de Enfermería',
+    category: 'ai',
+    badge: 'Medical AI & Triage',
+    image: 'assets/images/agente_enfermeria_preview.jpg',
+    summary: 'Sistema asistencial de valoración clínica y triage asistido por IA multimodal, digitalización de prescripciones manuscritas, extracción estructurada de signos vitales (JSON-LD) y reportes médicos en PDF.',
+    tags: ['Python', 'Streamlit', 'Google Gemini', 'JSON-LD', 'ReportLab', 'SQLite'],
+    github: 'https://github.com/Mileidys10/agente_enfermeria',
+    architecture: 'Pipeline multimodal con extracción estructurada de signos vitales mediante visión computacional y modelos Gemini. Normalización médica a estándares OKF JSON-LD y generación transaccional de reportes clínicos en PDF con ReportLab.',
+    challenges: [
+      'Digitalización y OCR contextual de recetas y notas clínicas manuscritas de médicos.',
+      'Extracción determinista de constantes vitales (frecuencia, presión, saturación O2) en esquemas JSON-LD.',
+      'Generación automatizada de reportes médicos en PDF para la historia clínica hospitalaria.'
+    ],
+    features: [
+      'Dashboard clínico interactivo en Streamlit con telemetría de signos vitales',
+      'Digitalización y transcripción de notas clínicas manuscritas con IA multimodal',
+      'Normalización médica a especificación JSON-LD y persistencia en SQLite',
+      'Generador instantáneo de reportes de triage y valoración en PDF'
     ]
   }
 ];
@@ -316,6 +338,7 @@ Proyectos Insignia:
   5. <span class="term-highlight">Telegram ERP Agent</span>: Bot empresarial con IA y reportes PDF.
   6. <span class="term-highlight">CinemaStellar</span>: Portal de cine con selector de butacas SVG.
   7. <span class="term-highlight">MindDump</span>: Capturador cognitivo PWA local-first con IndexedDB y audio.
+  8. <span class="term-highlight">Agente Clínico de Enfermería</span>: Triage asistido con IA multimodal, JSON-LD y PDF.
 `,
     contact: () => `
 Conectemos:

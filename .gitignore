@@ -1,0 +1,12 @@
+# Entorno y Credenciales Seguras
+.env
+*.env
+.env.local
+credentials.json
+service_account.json
+AGENTS.md
+GEMINI.md
+.agents/
+.gemini/
+contexto/
+obsidian-vault/

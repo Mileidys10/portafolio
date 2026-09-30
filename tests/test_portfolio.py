@@ -66,6 +66,7 @@ class TestPortfolioIntegrity(unittest.TestCase):
         self.assertIn("telegram-erp", content, "Falta proyecto Telegram ERP")
         self.assertIn("cinemastellar", content, "Falta proyecto CinemaStellar")
         self.assertIn("minddump", content, "Falta proyecto MindDump")
+        self.assertIn("agente-enfermeria", content, "Falta proyecto Agente Enfermeria")
 
         # Comandos de terminal
         self.assertIn("help:", content, "Falta comando help en CLI")
@@ -83,7 +84,8 @@ class TestPortfolioIntegrity(unittest.TestCase):
             "videogame_pose_preview.jpg",
             "telegram_erp_preview.jpg",
             "cinemastellar_preview.jpg",
-            "minddump_preview.jpg"
+            "minddump_preview.jpg",
+            "agente_enfermeria_preview.jpg"
         ]
 
         for img in expected_images:
