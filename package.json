@@ -1,0 +1,26 @@
+{
+  "name": "portafolio-mileidys",
+  "version": "1.0.0",
+  "description": "Portafolio profesional interactivo de Mileidys Agamez Ospino",
+  "main": "index.html",
+  "scripts": {
+    "start": "python serve.py",
+    "test": "python tests/test_portfolio.py"
+  },
+  "keywords": [
+    "portfolio",
+    "software-engineer",
+    "fullstack",
+    "angular",
+    "ionic",
+    "spring-boot"
+  ],
+  "dependencies": {
+    "typescript": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0"
+  },
+  "author": "Mileidys Agamez Ospino",
+  "license": "MIT"
+}

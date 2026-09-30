@@ -1,0 +1,458 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mileidys Agamez Ospino | Software Engineer & Fullstack Architect</title>
+  <meta name="description" content="Portafolio de Mileidys Agamez Ospino. Especialista en aplicaciones moviles hibridas (Ionic/Angular), backends empresariales (Spring Boot/Java) e Inteligencia Artificial aplicada." />
+  <meta name="keywords" content="Mileidys Agamez, Software Engineer, Fullstack, Angular, Ionic, Spring Boot, Java, Python, FastAPI, YOLOv8, Computer Vision" />
+  <meta name="author" content="Mileidys Agamez Ospino" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mileidys Agamez Ospino | Software Engineer Portfolio" />
+  <meta property="og:description" content="Desarrollo movil hibrido, microservicios empresariales y soluciones de IA aplicada." />
+  <meta property="og:image" content="assets/images/mileidys_profile.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Background -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="ambient-glow"></div>
+
+  <!-- Navigation -->
+  <header class="site-nav" id="site-nav">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand">
+        <div class="brand-avatar">
+          <img src="assets/images/mileidys_profile.jpg" alt="Mileidys Agamez" />
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">Mileidys Agamez</span>
+          <span class="brand-status">
+            <span class="status-dot"></span>
+            Disponible para proyectos
+          </span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#projects" class="nav-link">Proyectos</a></li>
+        <li><a href="#skills" class="nav-link">Habilidades</a></li>
+        <li><a href="#terminal" class="nav-link">Terminal</a></li>
+        <li><a href="#milestones" class="nav-link">Trayectoria</a></li>
+        <li><a href="#contact" class="nav-link">Contacto</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" title="Cambiar tema">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="https://github.com/Mileidys10" target="_blank" rel="noopener noreferrer" class="btn-github">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Text Col -->
+          <div class="hero-text-col">
+            <div class="hero-eyebrow">
+              <span class="eyebrow-dot">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </span>
+              Software Engineer &amp; Fullstack Architect
+            </div>
+            <h1 class="hero-title">
+              Construyo software <em>escalable,</em><br />
+              inteligente <span class="gradient-text">&amp; hermoso.</span>
+            </h1>
+            <p class="hero-subtitle">
+              Ingeniera apasionada por la arquitectura limpia, aplicaciones moviles hibridas (Ionic/Angular/Capacitor), microservicios empresariales (Java/Spring Boot) e Inteligencia Artificial aplicada con YOLOv8 y Gemini.
+            </p>
+            <div class="hero-cta-row">
+              <a href="#projects" class="btn-primary">
+                <span>Ver Proyectos</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#contact" class="btn-secondary">
+                <span>Hablemos</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </a>
+            </div>
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <span class="metric-val">6+</span>
+                <span class="metric-label">Proyectos Insignia</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">284+</span>
+                <span class="metric-label">Modulos DevCards</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">100%</span>
+                <span class="metric-label">Test Pass Rate</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">OKF</span>
+                <span class="metric-label">Gov. Agentica</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo Col -->
+          <div class="hero-visual">
+            <!-- Floating badges -->
+            <div class="float-badge top-right">
+              <span class="badge-dot"></span> Angular &amp; Ionic
+            </div>
+            <div class="float-badge mid-left">
+              <span class="badge-dot amber"></span> Spring Boot 3
+            </div>
+
+            <div class="hero-photo-card">
+              <img src="assets/images/mileidys_profile.jpg" alt="Mileidys Agamez Ospino — Software Engineer" />
+              <div class="hero-photo-overlay"></div>
+              <div class="hero-photo-badge">
+                <span class="hero-badge-name">Mileidys Agamez Ospino</span>
+                <div class="hero-badge-tags">
+                  <span class="hero-badge-tag">Mobile</span>
+                  <span class="hero-badge-tag">Backend</span>
+                  <span class="hero-badge-tag">AI &amp; Vision</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Portafolio Destacado</span>
+          <h2 class="section-title">Proyectos de Alto Impacto</h2>
+          <p class="section-desc">
+            Sistemas completos con rigor tecnico, arquitectura modular, pruebas automatizadas y alto estandar visual.
+          </p>
+        </header>
+
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">Todos (6)</button>
+          <button class="filter-btn" data-filter="mobile">Movil &amp; Hibrido</button>
+          <button class="filter-btn" data-filter="fullstack">Fullstack Empresarial</button>
+          <button class="filter-btn" data-filter="ai">IA &amp; Computer Vision</button>
+          <button class="filter-btn" data-filter="backend">Backend &amp; Automatizacion</button>
+        </div>
+
+        <div id="projects-grid" class="projects-grid">
+          <!-- Rendered dynamically from app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Ecosistema Tecnologico</span>
+          <h2 class="section-title">Habilidades y Dominio Tecnico</h2>
+          <p class="section-desc">
+            Herramientas, frameworks y metodologias aplicadas en el ciclo completo de vida del software.
+          </p>
+        </header>
+
+        <div class="skills-container">
+          <!-- Card 1: Mobile & Frontend -->
+          <div class="skill-card">
+            <div class="skill-icon-header">
+              <div class="skill-icon-box">📱</div>
+              <h3 class="skill-category-title">Mobile &amp; Frontend</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-name-row"><span>Angular 17+ &amp; TypeScript</span><span>92%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:92%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name-row"><span>Ionic Framework &amp; Capacitor</span><span>90%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name-row"><span>HTML5 Semantico &amp; CSS3 / SCSS</span><span>95%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name-row"><span>PWA &amp; IndexedDB (Dexie)</span><span>85%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:85%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Backend & Cloud -->
+          <div class="skill-card">
+            <div class="skill-icon-header">
+              <div class="skill-icon-box">⚙️</div>
+              <h3 class="skill-category-title">Backend &amp; Cloud</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-name-row"><span>Java 17/21 &amp; Spring Boot 3</span><span>88%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:88%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name-row"><span>Python 3.12 &amp; FastAPI</span><span>92%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:92%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name-row"><span>PostgreSQL &amp; SQLAlchemy / JPA</span><span>86%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:86%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name-row"><span>Docker &amp; Docker Compose</span><span>85%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:85%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: AI & Vision -->
+          <div class="skill-card">
+            <div class="skill-icon-header">
+              <div class="skill-icon-box">🧠</div>
+              <h3 class="skill-category-title">IA &amp; Computer Vision</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-name-row"><span>YOLOv8 &amp; MediaPipe</span><span>88%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:88%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name-row"><span>Google Gemini API &amp; GenAI</span><span>90%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name-row"><span>Pygame-CE &amp; OpenCV</span><span>84%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:84%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name-row"><span>Arquitectura Limpia &amp; QA</span><span>92%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width:92%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terminal Section -->
+    <section id="terminal" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Consola Interactiva</span>
+          <h2 class="section-title">Mileidys CLI &mdash; Terminal en Vivo</h2>
+          <p class="section-desc">
+            Interactua con la consola virtual. Escribe <code style="color:var(--accent-sage-light);background:var(--accent-sage-muted);padding:2px 7px;border-radius:5px;font-size:.85em">help</code> para empezar.
+          </p>
+        </header>
+
+        <div class="terminal-full-wrapper">
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">mileidys@engineering-node:~ (bash)</span>
+          </div>
+          <div class="terminal-full-screen">
+            <div class="term-welcome">
+              Bienvenida/o a la terminal de <strong>Mileidys Agamez</strong>.<br />
+              Escribe <span class="term-highlight">help</span> para ver comandos disponibles.
+            </div>
+            <div id="cli-history" class="term-history"></div>
+            <div class="term-input-row">
+              <span class="term-prompt">mileidys@eng:~$</span>
+              <input type="text" id="cli-input" class="cli-input" placeholder="Escribe 'help', 'bio', 'skills', 'projects'..." autocomplete="off" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Milestones / Timeline -->
+    <section id="milestones" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Hitos de Ingenieria</span>
+          <h2 class="section-title">Trayectoria &amp; Experiencia</h2>
+          <p class="section-desc">
+            Evolucion formativa y tecnica en la construccion de sistemas robustos.
+          </p>
+        </header>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2026 &mdash; Presente</span>
+              <h3 class="timeline-title">Fabrica de Software Agentica &amp; Ecosistema OKF v0.2</h3>
+              <p class="timeline-desc">
+                Diseno y adopcion del estandar Google Cloud OKF (Open Knowledge Format) v0.2 para gobernanza de codigo, desarrollo multi-agente, suites de pruebas automaticas y arquitectura de proyectos complejos.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2025 &mdash; 2026</span>
+              <h3 class="timeline-title">Soluciones Moviles Hibridas &amp; E-Commerce</h3>
+              <p class="timeline-desc">
+                Creacion de <strong>TinderApp</strong> sobre Ionic/Angular/Supabase con animaciones de swipe a 60 FPS y desarrollo de la plataforma e-commerce <strong>Aeterna Perfumes</strong> con Spring Boot 3, Spring Security 6 y Docker.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 &mdash; 2025</span>
+              <h3 class="timeline-title">Fundamentos Avanzados de Ingenieria &amp; Clean Code</h3>
+              <p class="timeline-desc">
+                Dominio de estructuras de datos, programacion orientada a objetos en Java, algoritmos de concurrencia de sockets TCP/UDP, patrones de diseno GoF y principios SOLID.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Conectemos</span>
+          <h2 class="section-title">Hablemos de Tu Proximo Proyecto</h2>
+          <p class="section-desc">
+            Tienes una vacante de ingenieria, un proyecto retador o buscas colaborar? Enviame un mensaje y te respondere con rapidez.
+          </p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-card-info">
+            <div class="contact-method-card">
+              <div class="contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-detail">
+                <span class="contact-label">Correo Electronico</span>
+                <span class="contact-val">agamezmileidys@gmail.com</span>
+              </div>
+              <button class="btn-copy" onclick="copyToClipboard('agamezmileidys@gmail.com','Correo')">Copiar</button>
+            </div>
+
+            <div class="contact-method-card">
+              <div class="contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div class="contact-detail">
+                <span class="contact-label">GitHub Oficial</span>
+                <span class="contact-val">github.com/Mileidys10</span>
+              </div>
+              <a href="https://github.com/Mileidys10" target="_blank" rel="noopener noreferrer" class="btn-copy">Visitar</a>
+            </div>
+
+            <div class="contact-method-card">
+              <div class="contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-detail">
+                <span class="contact-label">Ubicacion / Modalidad</span>
+                <span class="contact-val">Remoto / Global (GMT-5 / EST)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="contact-name">Tu Nombre</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="Ej. Carlos Martinez" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Tu Correo</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="Ej. carlos@empresa.com" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-msg">Mensaje / Propuesta</label>
+              <textarea id="contact-msg" class="form-textarea" placeholder="Cuentame sobre el rol, proyecto o tecnologia..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="justify-content:center">
+              <span>Enviar Mensaje</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Case Study Modal -->
+  <div id="case-study-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeCaseStudy()" title="Cerrar">&times;</button>
+      <img id="modal-img" src="" alt="" class="modal-header-img" />
+      <div class="modal-body-content">
+        <div id="modal-tags" class="modal-tags"></div>
+        <h2 id="modal-title" class="modal-project-title"></h2>
+        <p id="modal-desc" class="modal-text"></p>
+        <h4 class="modal-section-subtitle">Arquitectura y Decisiones Tecnicas</h4>
+        <p id="modal-arch" class="modal-text"></p>
+        <h4 class="modal-section-subtitle">Desafios de Ingenieria Resueltos</h4>
+        <ul id="modal-challenges" class="modal-feature-list"></ul>
+        <h4 class="modal-section-subtitle">Caracteristicas Principales</h4>
+        <ul id="modal-features" class="modal-feature-list"></ul>
+        <div class="modal-actions">
+          <a id="modal-github" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <span>Ver en GitHub</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <button class="btn-secondary" onclick="closeCaseStudy()">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-copy">
+          &copy; 2026 <strong>Mileidys Agamez Ospino</strong>. Disenado bajo estandar <strong>Google Cloud OKF v0.2</strong>.
+        </p>
+        <div class="footer-socials">
+          <a href="https://github.com/Mileidys10" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="mailto:agamezmileidys@gmail.com" class="icon-btn" title="Email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
