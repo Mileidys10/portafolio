@@ -135,7 +135,7 @@ const PROJECTS = [
     title: 'CinemaStellar Movie Platform',
     category: 'fullstack',
     badge: 'Web & Media',
-    image: 'assets/images/perfume_store_preview.jpg',
+    image: 'assets/images/cinemastellar_preview.jpg',
     summary: 'Portal multimedia para cartelera cinematografica, seleccion visual de butacas en tiempo real y emision de boletos digitales con codigo QR.',
     tags: ['HTML5', 'CSS3', 'JavaScript ES6+', 'SVG Interactivo', 'LocalStorage'],
     github: 'https://github.com/Mileidys10/CINEMASTELLAR',
@@ -150,6 +150,28 @@ const PROJECTS = [
       'Mapa interactivo de sala de cine para reserva de butacas',
       'Carrito de combos y confiteria integrado',
       'Boleto digital descargable con confirmacion de compra'
+    ]
+  },
+  {
+    id: 'minddump',
+    title: 'MindDump Cognitive Capturer',
+    category: 'mobile',
+    badge: 'PWA & Offline-First',
+    image: 'assets/images/minddump_preview.jpg',
+    summary: 'Capturador de pensamientos y notas de voz local-first con PWA, IndexedDB (Dexie.js), sincronizacion a la nube y estetica Quiet Luxury.',
+    tags: ['Angular', 'Ionic', 'IndexedDB', 'PWA', 'TypeScript', 'Firebase Hosting'],
+    github: 'https://github.com/Mileidys10/minddump',
+    architecture: 'Arquitectura Local-First con almacenamiento reactivo en IndexedDB mediante Dexie.js, Service Workers para funcionamiento 100% offline y despliegue continuo en Firebase Hosting.',
+    challenges: [
+      'Garantizar persistencia local sin conexion y sincronizacion no destructiva con resolucion de conflictos.',
+      'Soporte de grabacion de audio y formas de onda fluidas en dispositivos moviles y navegadores de escritorio.',
+      'Evolucion estetica hacia diseno Quiet Luxury sin saturacion de emojis, con tipografia de precision e iconos vectoriales SVG.'
+    ],
+    features: [
+      'Captura rapida de notas de texto y grabaciones de audio',
+      'Persistencia robusta en IndexedDB con cero latencia',
+      'Despliegue activo en Firebase Hosting con soporte PWA instalable',
+      'Estetica minimalista premium en modo oscuro con paleta titanio y ambar'
     ]
   }
 ];
@@ -293,6 +315,7 @@ Proyectos Insignia:
   4. <span class="term-highlight">VideoGame Pose Combat</span>: Lucha en tiempo real con YOLOv8/MediaPipe.
   5. <span class="term-highlight">Telegram ERP Agent</span>: Bot empresarial con IA y reportes PDF.
   6. <span class="term-highlight">CinemaStellar</span>: Portal de cine con selector de butacas SVG.
+  7. <span class="term-highlight">MindDump</span>: Capturador cognitivo PWA local-first con IndexedDB y audio.
 `,
     contact: () => `
 Conectemos:

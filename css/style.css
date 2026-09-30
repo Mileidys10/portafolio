@@ -280,3 +280,89 @@ body{font-family:var(--font-body);background:var(--bg-primary);color:var(--text-
   .modal-body-content{padding:22px 18px}
   .contact-form{padding:22px 20px}
 }
+
+/* ==========================================================================
+   Hero Code Card (reemplaza foto)
+   ========================================================================== */
+.hero-code-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+  transition: all var(--t-smooth);
+}
+
+.hero-code-card:hover {
+  border-color: var(--border-active);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card), 0 0 60px var(--accent-sage-glow);
+}
+
+.hero-code-card .terminal-header {
+  background: #0a0d0c;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hero-code-card .terminal-body {
+  background: #080b0a;
+  padding: 24px;
+}
+
+/* Stat chips row inside terminal card */
+.hero-stat-chips {
+  display: flex;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.stat-chip {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 12px;
+  border-right: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  gap: 3px;
+  transition: background var(--t-fast);
+}
+
+.stat-chip:last-child {
+  border-right: none;
+}
+
+.stat-chip:hover {
+  background: var(--accent-sage-muted);
+}
+
+.stat-chip-val {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.stat-chip-label {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 600;
+}
+
+/* Nav avatar with initials */
+.brand-avatar--initials {
+  background: var(--accent-sage-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-avatar--initials span {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-sage-light);
+  letter-spacing: 0.02em;
+}

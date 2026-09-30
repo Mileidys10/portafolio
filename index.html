@@ -26,8 +26,8 @@
   <header class="site-nav" id="site-nav">
     <div class="container nav-container">
       <a href="#hero" class="nav-brand">
-        <div class="brand-avatar">
-          <img src="assets/images/mileidys_profile.jpg" alt="Mileidys Agamez" />
+        <div class="brand-avatar brand-avatar--initials">
+          <span>MA</span>
         </div>
         <div class="brand-info">
           <span class="brand-name">Mileidys Agamez</span>
@@ -94,16 +94,12 @@
             </div>
             <div class="hero-metrics">
               <div class="metric-item">
-                <span class="metric-val">6+</span>
+                <span class="metric-val">7+</span>
                 <span class="metric-label">Proyectos Insignia</span>
               </div>
               <div class="metric-item">
-                <span class="metric-val">284+</span>
-                <span class="metric-label">Modulos DevCards</span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-val">100%</span>
-                <span class="metric-label">Test Pass Rate</span>
+                <span class="metric-val">5</span>
+                <span class="metric-label">Stacks Dominados</span>
               </div>
               <div class="metric-item">
                 <span class="metric-val">OKF</span>
@@ -112,9 +108,8 @@
             </div>
           </div>
 
-          <!-- Photo Col -->
+          <!-- Visual Col — Terminal + Cards -->
           <div class="hero-visual">
-            <!-- Floating badges -->
             <div class="float-badge top-right">
               <span class="badge-dot"></span> Angular &amp; Ionic
             </div>
@@ -122,15 +117,52 @@
               <span class="badge-dot amber"></span> Spring Boot 3
             </div>
 
-            <div class="hero-photo-card">
-              <img src="assets/images/mileidys_profile.jpg" alt="Mileidys Agamez Ospino — Software Engineer" />
-              <div class="hero-photo-overlay"></div>
-              <div class="hero-photo-badge">
-                <span class="hero-badge-name">Mileidys Agamez Ospino</span>
-                <div class="hero-badge-tags">
-                  <span class="hero-badge-tag">Mobile</span>
-                  <span class="hero-badge-tag">Backend</span>
-                  <span class="hero-badge-tag">AI &amp; Vision</span>
+            <!-- Terminal card -->
+            <div class="hero-code-card">
+              <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">mileidys-profile.sh</span>
+              </div>
+              <div class="terminal-body">
+                <div class="term-line">
+                  <span class="term-prompt">$</span> <span class="term-cmd">whoami</span>
+                </div>
+                <div class="term-output" style="margin:6px 0 14px">
+                  <span class="term-highlight">Mileidys Agamez Ospino</span> — Software Engineer
+                </div>
+                <div class="term-line">
+                  <span class="term-prompt">$</span> <span class="term-cmd">cat stack.json</span>
+                </div>
+                <div class="term-badge-stack">
+                  <span class="term-badge">Mobile: Ionic / Angular / Capacitor</span>
+                  <span class="term-badge">Backend: Spring Boot 3 + Java 17</span>
+                  <span class="term-badge">Python: FastAPI / AI Agents</span>
+                  <span class="term-badge">Vision: YOLOv8 / MediaPipe</span>
+                  <span class="term-badge">Cloud: Docker / Supabase</span>
+                </div>
+                <div class="term-line" style="margin-top:14px">
+                  <span class="term-prompt">$</span> <span class="term-cmd">git status</span>
+                </div>
+                <div class="term-output" style="margin-top:6px">
+                  On branch <span class="term-highlight">main</span> — 0 vulnerabilidades.
+                </div>
+              </div>
+
+              <!-- Stat chips inside card -->
+              <div class="hero-stat-chips">
+                <div class="stat-chip">
+                  <span class="stat-chip-val">7+</span>
+                  <span class="stat-chip-label">Proyectos</span>
+                </div>
+                <div class="stat-chip">
+                  <span class="stat-chip-val">284+</span>
+                  <span class="stat-chip-label">DevCards</span>
+                </div>
+                <div class="stat-chip">
+                  <span class="stat-chip-val">100%</span>
+                  <span class="stat-chip-label">Tests Pass</span>
                 </div>
               </div>
             </div>
@@ -151,7 +183,7 @@
         </header>
 
         <div class="project-filters">
-          <button class="filter-btn active" data-filter="all">Todos (6)</button>
+          <button class="filter-btn active" data-filter="all">Todos (7)</button>
           <button class="filter-btn" data-filter="mobile">Movil &amp; Hibrido</button>
           <button class="filter-btn" data-filter="fullstack">Fullstack Empresarial</button>
           <button class="filter-btn" data-filter="ai">IA &amp; Computer Vision</button>
@@ -456,3 +488,4 @@
   <script src="js/app.js"></script>
 </body>
 </html>
+
