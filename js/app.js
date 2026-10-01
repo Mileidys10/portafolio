@@ -71,7 +71,7 @@ const PROJECTS = [
     badge: 'AI & Fullstack',
     image: 'assets/images/devcards_ai_preview.jpg',
     summary: 'Plataforma de estudio con 284 tarjetas tecnicas en 10 materias de ingenieria, quizzes interactivos, analogias y motor dual de IA (Gemini + Offline).',
-    tags: ['Python 3.12', 'FastAPI', 'Google Gemini', 'Pydantic', 'JavaScript', 'CSS3'],
+    tags: ['FastAPI', 'Python', 'Google Gemini', 'Docker', 'Pydantic'],
     github: 'https://github.com/Mileidys10/devcards_ai',
     architecture: 'Backend en FastAPI con validacion estricta de esquemas JSON con Pydantic. Motor de inferencia dual con Google Gemini API y generador sintetico determinista offline.',
     challenges: [
@@ -93,7 +93,7 @@ const PROJECTS = [
     badge: 'Computer Vision & Gaming',
     image: 'assets/images/videogame_pose_preview.jpg',
     summary: 'Videojuego de combate multijugador por vision computacional en tiempo real donde los jugadores disparan rayos usando poses corporales frente a la camara.',
-    tags: ['Python', 'YOLOv8-Pose', 'MediaPipe', 'Pygame-CE', 'OpenCV', 'Computer Vision'],
+    tags: ['Python', 'YOLOv8-Pose', 'MediaPipe', 'Docker', 'OpenCV'],
     github: 'https://github.com/Mileidys10/videogame_pose',
     architecture: 'Patron Strategy desacoplado con soporte intercambiable entre YOLOv8-Pose y MediaPipe Tasks API. Motor de fisica de proyectiles continuos y sintetizador de audio procedimental offline.',
     challenges: [
@@ -115,7 +115,7 @@ const PROJECTS = [
     badge: 'AI & Enterprise Automation',
     image: 'assets/images/telegram_erp_preview.jpg',
     summary: 'Agente conversacional empresarial para Telegram conectado a BD relacionales para consultar stock, registrar movimientos Kardex y emitir reportes PDF.',
-    tags: ['Python', 'SQLAlchemy', 'Telegram API', 'Google GenAI', 'ReportLab', 'PostgreSQL'],
+    tags: ['Python', 'SQLAlchemy', 'Telegram API', 'Docker', 'ReportLab'],
     github: 'https://github.com/Mileidys10/telegram_erp_agent',
     architecture: 'Bot asincrono con control de acceso por roles (RBAC), transacciones ACID en SQLAlchemy, reportes ejecutivos PDF con ReportLab y consultas en lenguaje natural con Gemini Function Calling.',
     challenges: [
@@ -137,7 +137,7 @@ const PROJECTS = [
     badge: 'Web & Media',
     image: 'assets/images/cinemastellar_preview.jpg',
     summary: 'Portal multimedia para cartelera cinematografica, seleccion visual de butacas en tiempo real y emision de boletos digitales con codigo QR.',
-    tags: ['HTML5', 'CSS3', 'JavaScript ES6+', 'SVG Interactivo', 'LocalStorage'],
+    tags: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Docker', 'Nginx'],
     github: 'https://github.com/Mileidys10/CINEMASTELLAR',
     architecture: 'Single Page Application (SPA) ligera con diseno cinematografico inmersivo, mapa de butacas reactivo en SVG y persistencia en cliente.',
     challenges: [
@@ -181,7 +181,7 @@ const PROJECTS = [
     badge: 'Medical AI & Triage',
     image: 'assets/images/agente_enfermeria_preview.jpg',
     summary: 'Sistema asistencial de valoración clínica y triage asistido por IA multimodal, digitalización de prescripciones manuscritas, extracción estructurada de signos vitales (JSON-LD) y reportes médicos en PDF.',
-    tags: ['Python', 'Streamlit', 'Google Gemini', 'JSON-LD', 'ReportLab', 'SQLite'],
+    tags: ['Python', 'Streamlit', 'Google Gemini', 'Docker', 'ReportLab'],
     github: 'https://github.com/Mileidys10/agente_enfermeria',
     architecture: 'Pipeline multimodal con extracción estructurada de signos vitales mediante visión computacional y modelos Gemini. Normalización médica a estándares OKF JSON-LD y generación transaccional de reportes clínicos en PDF con ReportLab.',
     challenges: [
