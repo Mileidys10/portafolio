@@ -1,0 +1,16 @@
+﻿services:
+  portafolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portafolio_web
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+      - "80:80"
+    networks:
+      - portafolio-net
+
+networks:
+  portafolio-net:
+    driver: bridge
