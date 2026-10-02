@@ -1,7 +1,7 @@
 """
 test_portfolio.py - Suite de Pruebas Automatizadas para el Portafolio
-Gobernanza: Google Cloud OKF v0.2 Knowledge Bundle
-Fabrica de Software Agentica - Mileidys10
+Suite de Pruebas Automatizadas
+Portafolio Profesional - Mileidys10
 """
 
 import os

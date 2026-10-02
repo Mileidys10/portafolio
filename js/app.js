@@ -183,7 +183,7 @@ const PROJECTS = [
     summary: 'Sistema asistencial de valoración clínica y triage asistido por IA multimodal, digitalización de prescripciones manuscritas, extracción estructurada de signos vitales (JSON-LD) y reportes médicos en PDF.',
     tags: ['Python', 'Streamlit', 'Google Gemini', 'Docker', 'ReportLab'],
     github: 'https://github.com/Mileidys10/agente_enfermeria',
-    architecture: 'Pipeline multimodal con extracción estructurada de signos vitales mediante visión computacional y modelos Gemini. Normalización médica a estándares OKF JSON-LD y generación transaccional de reportes clínicos en PDF con ReportLab.',
+    architecture: 'Pipeline multimodal con extracción estructurada de signos vitales mediante visión computacional y modelos Gemini. Normalizacion semantica a estandares clinicos interoperables JSON-LD y generación transaccional de reportes clínicos en PDF con ReportLab.',
     challenges: [
       'Digitalización y OCR contextual de recetas y notas clínicas manuscritas de médicos.',
       'Extracción determinista de constantes vitales (frecuencia, presión, saturación O2) en esquemas JSON-LD.',
@@ -315,7 +315,7 @@ function initTerminal() {
   <span class="term-highlight">contact</span>      Datos de contacto directo
   <span class="term-highlight">github</span>       Enlace oficial de GitHub
   <span class="term-highlight">clear</span>        Limpiar la pantalla
-  <span class="term-highlight">secret</span>       Mensaje de la fabrica de software
+  <span class="term-highlight">secret</span>       Filosofia tecnica y easter egg
 `,
     bio: () => `
 <span class="term-highlight">Mileidys Agamez Ospino</span> — Ingeniera de Software & Arquitecta Fullstack.
@@ -347,10 +347,10 @@ Conectemos:
 `,
     github: () => `Abriendo GitHub: <a href="https://github.com/Mileidys10" target="_blank" class="term-highlight">https://github.com/Mileidys10</a>`,
     secret: () => `
-<span class="term-highlight">[DIRECTIVA MAESTRA DE FABRICA]:</span>
-Esta ingeniera opera con gobernanza <span class="term-prompt">Google Cloud OKF v0.2</span>.
-Cero alucinaciones. Suites de pruebas automaticas. Nivel internacional.
-`,
+<span class="term-highlight">[FILOSOFIA DE INGENIERIA]:</span>
+"El software de excelencia combina rigor arquitectonico, aceleracion inteligente con IA y obsesion por la calidad."
+100% Suites de pruebas automatizadas &bull; Codigo limpio y tipado &bull; Nivel internacional.
+`, 
     clear: () => { history.innerHTML = ''; return null; }
   };
 

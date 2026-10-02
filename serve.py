@@ -1,6 +1,6 @@
 """
 serve.py - Servidor Local de Demostracion para el Portafolio
-Gobernanza: Google Cloud OKF v0.2 Knowledge Bundle
+Portafolio Profesional de Ingenieria
 Mileidys Agamez Ospino
 """
 
