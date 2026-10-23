@@ -1,0 +1,117 @@
+/* ==========================================================================
+   DESIGN SYSTEM TOKENS — Accept & Proceed / Editorial Broadsheet
+   Based on DESIGN.md, variables.css, and tokens.json
+   ========================================================================== */
+
+:root {
+  /* 1. Base Color Palette */
+  --color-ink-black: #17191c;
+  --color-paper-warm: #f9f7f3;
+  --color-paper-white: #ffffff;
+  --color-bone: #ecebe7;
+  --color-mist-gray: #f2f2f3;
+  --color-fog-white: #fafafb;
+  --color-slate-gray: #777b86;
+  --color-ash-gray: #979799;
+  --color-smoke-gray: #a3a6af;
+  --color-blush-peach: #fbe1d1;
+  --color-sienna-brown: #5d2a1a;
+  --color-charcoal: #333333;
+  --color-graphite: #8c8c8c;
+
+  /* 2. Typography Families */
+  --font-display: 'Fraunces', 'Newsreader', Georgia, serif;
+  --font-body: 'Inter', 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* 3. Typography Scale & Weights */
+  --text-caption: 11px;
+  --text-body-sm: 14px;
+  --text-body: 16px;
+  --text-subheading: 20px;
+  --text-heading-sm: 24px;
+  --text-heading: 36px;
+  --text-heading-lg: 54px;
+  --text-display: 72px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  /* 4. Radii — Exact 4-Tier Scale from DESIGN.md */
+  --radius-xs: 3.4px;        /* Signature Badge / Tag Micro-Radius */
+  --radius-sm: 6px;
+  --radius-md: 3.4px;        /* Badges */
+  --radius-lg: 8px;          /* Cards & Project Images */
+  --radius-xl: 16px;
+  --radius-full: 100px;      /* Pill Buttons & Search/Inputs */
+
+  /* Named Radii from DESIGN.md */
+  --radius-badges: 3.4px;
+  --radius-cards: 8px;
+  --radius-buttons-pill: 100px;
+  --radius-buttons-medium: 20px;
+
+  /* 5. Transitions */
+  --t-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --t-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --t-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* 6. Semantic Theme Defaults (LIGHT THEME — Editorial Warm Paper Broadsheet) */
+  --bg-primary: var(--color-paper-warm);         /* #f9f7f3 warm cream canvas */
+  --bg-secondary: var(--color-mist-gray);        /* #f2f2f3 mist gray */
+  --bg-card: var(--color-paper-white);          /* #ffffff card surface */
+  --bg-card-hover: var(--color-fog-white);      /* #fafafb */
+  --bg-glass: rgba(249, 247, 243, 0.92);        /* frosted warm cream */
+  
+  --text-primary: var(--color-ink-black);       /* #17191c primary dark ink */
+  --text-secondary: var(--color-slate-gray);    /* #777b86 */
+  --text-muted: var(--color-ash-gray);          /* #979799 */
+  --text-invert: var(--color-paper-white);      /* #ffffff */
+
+  --border-subtle: rgba(23, 25, 28, 0.08);     /* hairline divider */
+  --border-card: rgba(23, 25, 28, 0.12);       /* structural hairline */
+  --border-active: var(--color-ink-black);      /* 1px solid active hairline */
+
+  --accent-sage: var(--color-ink-black);        /* Primary CTA is elegant Ink */
+  --accent-sage-light: var(--color-sienna-brown);/* Warm sienna accent */
+  --accent-sage-muted: var(--color-bone);       /* Raised button fill #ecebe7 */
+  --accent-sage-glow: rgba(93, 42, 26, 0.12);
+  --accent-amber: var(--color-sienna-brown);
+  --accent-amber-light: var(--color-sienna-brown);
+  --accent-amber-muted: var(--color-blush-peach);/* Blush peach warm wash */
+
+  --gradient-brand: linear-gradient(135deg, var(--color-sienna-brown) 0%, var(--color-ink-black) 100%);
+  --shadow-card: oklab(0 0 0 / 0.04) 0px 0px 0px 1px, rgba(0, 0, 0, 0.06) 0px 4px 20px 0px;
+  --shadow-glow: none; /* DESIGN.md explicitly avoids drop shadows and glows */
+}
+
+/* DARK THEME (Inverted Ink Black Broadsheet) */
+[data-theme="dark"] {
+  --bg-primary: var(--color-ink-black);         /* #17191c */
+  --bg-secondary: #1f2226;
+  --bg-card: #22262b;
+  --bg-card-hover: #292d34;
+  --bg-glass: rgba(23, 25, 28, 0.90);
+
+  --text-primary: var(--color-paper-warm);      /* #f9f7f3 */
+  --text-secondary: var(--color-smoke-gray);    /* #a3a6af */
+  --text-muted: var(--color-slate-gray);        /* #777b86 */
+  --text-invert: var(--color-ink-black);
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(255, 255, 255, 0.14);
+  --border-active: var(--color-blush-peach);
+
+  --accent-sage: var(--color-paper-white);
+  --accent-sage-light: var(--color-blush-peach);
+  --accent-sage-muted: rgba(251, 225, 209, 0.12);
+  --accent-sage-glow: rgba(251, 225, 209, 0.22);
+  --accent-amber: var(--color-blush-peach);
+  --accent-amber-light: var(--color-blush-peach);
+  --accent-amber-muted: rgba(251, 225, 209, 0.15);
+
+  --gradient-brand: linear-gradient(135deg, var(--color-blush-peach) 0%, var(--color-paper-white) 100%);
+  --shadow-card: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 8px 30px rgba(0, 0, 0, 0.35);
+  --shadow-glow: none;
+}

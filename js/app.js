@@ -474,7 +474,7 @@ function initAmbientGlow() {
 function initThemeToggle() {
   const btn = document.getElementById('theme-toggle');
   if (!btn) return;
-  const saved = localStorage.getItem('mileidys_portfolio_theme') || 'dark';
+  const saved = localStorage.getItem('mileidys_portfolio_theme') || 'light';
   document.documentElement.setAttribute('data-theme', saved);
   btn.addEventListener('click', () => {
     const current = document.documentElement.getAttribute('data-theme');
