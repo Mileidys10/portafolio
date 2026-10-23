@@ -502,17 +502,72 @@ function initNavScroll() {
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
-  form.addEventListener('submit', e => {
+  const submitBtn = document.getElementById('contact-submit-btn') || form.querySelector('button[type="submit"]');
+  const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '<span>Enviar Mensaje</span>';
+
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const name = document.getElementById('contact-name').value.trim();
     const email = document.getElementById('contact-email').value.trim();
     const msg = document.getElementById('contact-msg').value.trim();
+
     if (!name || !email || !msg) {
       showToast('Por favor completa todos los campos.', 'error');
       return;
     }
-    showToast(`Gracias ${name}! Tu mensaje fue enviado.`, 'success');
-    form.reset();
+
+    // Indicador visual de envío
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation: spin 1s linear infinite;"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg>
+        <span>Enviando mensaje...</span>
+      `;
+    }
+
+    try {
+      // Envío real y asíncrono a FormSubmit.co
+      const response = await fetch('https://formsubmit.co/ajax/agamezmileidys@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: msg,
+          _subject: `Nuevo mensaje de ${name} desde tu Portafolio Web`,
+          _template: 'table',
+          _captcha: 'false'
+        })
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (response.ok && (data.success === 'true' || data.success === true || response.status === 200)) {
+        showToast(`¡Gracias ${name}! Tu mensaje fue enviado con éxito a mi correo.`, 'success');
+        form.reset();
+      } else if (data.message && data.message.includes('Activation')) {
+        showToast(`¡Mensaje enviado! (Activa el enlace de verificación en agamezmileidys@gmail.com)`, 'info');
+        form.reset();
+      } else {
+        throw new Error(data.message || 'Error en endpoint');
+      }
+    } catch (err) {
+      console.warn('FormSubmit endpoint aviso, ejecutando enlace directo:', err);
+      // Fallback seguro: Redirigir a mailto
+      const subject = encodeURIComponent(`Contacto de ${name} - Portafolio Web`);
+      const body = encodeURIComponent(`Hola Mileidys,\n\nMi nombre es ${name} (${email}).\n\nMensaje:\n${msg}\n\n--\nEnviado desde tu portafolio web.`);
+      window.open(`mailto:agamezmileidys@gmail.com?subject=${subject}&body=${body}`, '_blank');
+      showToast('Abriendo tu gestor de correo para enviar directamente...', 'info');
+      form.reset();
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+      }
+    }
   });
 }
 

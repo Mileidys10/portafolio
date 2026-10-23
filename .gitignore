@@ -10,3 +10,6 @@ GEMINI.md
 .gemini/
 contexto/
 obsidian-vault/
+
+__pycache__/
+*.pyc

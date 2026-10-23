@@ -3,7 +3,8 @@
    Based on DESIGN.md, variables.css, and tokens.json
    ========================================================================== */
 
-:root {
+:root,
+[data-theme="light"] {
   /* 1. Base Color Palette */
   --color-ink-black: #17191c;
   --color-paper-warm: #f9f7f3;

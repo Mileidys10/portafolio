@@ -40,10 +40,15 @@ class TestPortfolioIntegrity(unittest.TestCase):
 
     def test_02_css_design_system(self):
         css_path = os.path.join(PORTFOLIO_DIR, "css", "style.css")
+        vars_path = os.path.join(PORTFOLIO_DIR, "css", "variables.css")
         self.assertTrue(os.path.exists(css_path), "style.css no existe")
         
         with open(css_path, "r", encoding="utf-8") as f:
             content = f.read()
+            
+        if os.path.exists(vars_path):
+            with open(vars_path, "r", encoding="utf-8") as vf:
+                content += "\n" + vf.read()
 
         self.assertIn(":root", content, "Faltan tokens de diseño en :root")
         self.assertIn("--bg-primary", content, "Falta variable --bg-primary")
